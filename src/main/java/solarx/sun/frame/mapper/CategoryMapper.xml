@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="solarx.sun.frame.mapper.CategoryMapper">
-	<select id="getCount" resultType="solarx.sun.frame.model.Category">
+	<select id="getCount" resultType="Integer">
 		select count(1) from t_category
 	</select>
 	<select id="getList" resultType="solarx.sun.frame.model.Category">
-		select * from t_category
+		SELECT 
+		ID id,
+		TYPE type,
+		NAME name
+		FROM t_category
 	</select>
 	<select id="getById" resultType="solarx.sun.frame.model.Category" parameterType="Integer">
-		select * from t_category where 1 = 1 and id = #{id}
+		SELECT 
+		ID id,
+		TYPE type,
+		NAME name
+		FROM t_category
+		WHERE 1 = 1 AND id = #{id}
 	</select>
 </mapper>
