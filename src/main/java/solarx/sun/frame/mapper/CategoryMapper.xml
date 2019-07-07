@@ -17,6 +17,7 @@
 		TYPE type,
 		NAME name
 		FROM t_category
-		WHERE 1 = 1 AND id = #{id}
+		WHERE 1 = 1
+		AND id = #{id}
 	</select>
 </mapper>
